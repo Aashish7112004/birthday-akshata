@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Happy Birthday! 💖 A Dreamy Cosmic Journey</title>
+  <meta name="description" content="An aesthetic pink interactive birthday website for the September 18th queen, born at 8:10 PM.">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+
+  <!-- Google Fonts: Editorial Serif + Modern Sans + Handwritten Polaroid Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,400;1,600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css?v=fresh_v10">
+</head>
+<body class="pink-theme">
+
+  <!-- Fullscreen Floating Background Canvas -->
+  <canvas id="ambientCanvas"></canvas>
+  <canvas id="confettiCanvas"></canvas>
+
+  <!-- Ambient Audio Controller -->
+  <div class="audio-pill" id="audioPill" title="Birthday Music Player">
+    <div class="vinyl-record" id="vinylIcon">
+      <div class="vinyl-center">💖</div>
+    </div>
+    <div class="audio-info">
+      <span class="track-title" id="trackTitle">Pastel Lo-Fi Chime</span>
+      <span class="track-status" id="trackStatus">Tap to Play 🎵</span>
+    </div>
+    <div class="audio-waves" id="audioWaves">
+      <span></span><span></span><span></span><span></span>
+    </div>
+  </div>
+
+  <!-- Top Floating Journey Bar -->
+  <header class="top-nav">
+    <div class="brand-badge">
+      <span class="badge-dot"></span>
+      <span>18 SEPT ✦ 8:10 PM</span>
+    </div>
+    <div class="journey-stepper">
+      <button class="step-dot active" data-step="0" title="Entrance">💌</button>
+      <button class="step-dot" data-step="1" title="Cosmic Dossier">🪐</button>
+      <button class="step-dot" data-step="2" title="Memory Photobooth">📸</button>
+      <button class="step-dot" data-step="3" title="Birthday Cake">🎂</button>
+      <button class="step-dot" data-step="4" title="Mini Games">🕹️</button>
+      <button class="step-dot" data-step="5" title="Scratch Cards">🪄</button>
+      <button class="step-dot" data-step="6" title="Bestie Receipt">🧾</button>
+      <button class="step-dot" data-step="7" title="Letter & Wish">💌</button>
+    </div>
+    <div class="nav-actions">
+      <button id="openCustomizerBtn" class="pill-btn secondary" title="Customize Photos & Text">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        <span>Customize</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="journey-container">
+
+    <!-- ========================================================== -->
+    <!-- CHAPTER 0: UNBOXING & COSMIC ENTRANCE                     -->
+    <!-- ========================================================== -->
+    <section class="chapter-card active" id="chapter-0">
+      <div class="cosmic-portal">
+        <div class="halo-circle pink-halo"></div>
+        <div class="halo-circle outer"></div>
+        
+        <div class="gift-box-wrap" id="giftBoxTrigger">
+          <div class="floating-envelope">
+            <div class="envelope-stamp">18.09 ✦ 8:10 PM</div>
+            <!-- Hero Photo Card Peeking Out From Envelope -->
+            <div class="envelope-photo-peek">
+              <img src="images/IMG-20260826-WA0001.jpg" alt="Akshata Raghu" class="envelope-peek-img">
+              <span class="envelope-peek-badge">Queen Akshu 👑</span>
+            </div>
+            <div class="wax-seal" id="waxSeal">
+              <span class="wax-initial">♍</span>
+              <span class="wax-ripple"></span>
+            </div>
+            <div class="envelope-ribbon"></div>
+          </div>
+          <div class="box-shadow"></div>
+        </div>
+
+        <div class="portal-text">
+          <span class="eyebrow-tag">💖 FOR MY ANNOYING YET MOST FAVORITE TAI IN THE GALAXY 💖</span>
+          <h1 class="main-title">Happy Birthday, <br><span class="gradient-text recipient-name">Akshata Raghu</span>! 🎂✨</h1>
+          <p class="subtitle">
+            Crafted with lots of brotherly love, gentle teasing, and infinite pride. Born on <strong>September 18th at 8:10 PM</strong> — the exact moment my life got 100x noisier, crazier, and infinitely better!
+          </p>
+          <div class="cta-wrap">
+            <button class="primary-btn glow-btn" id="startJourneyBtn">
+              <span>Unwrap Your Birthday Gift, Akshu 🎁✨</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+            </button>
+            <span class="timer-hint">⏳ Curated ~3 min Brother-Tai Experience</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================== -->
+    <!-- CHAPTER 1: THE VIRGO COSMIC DOSSIER                       -->
+    <!-- ========================================================== -->
+    <section class="chapter-card" id="chapter-1">
+      <div class="chapter-header">
+        <span class="chapter-badge">Chapter 01 // Cosmic Identity</span>
+        <h2 class="section-title">The Virgo Cosmic Dossier ♍</h2>
+        <p class="section-desc">Born September 18th at exactly 8:10 PM under the golden twilight skies.</p>
+      </div>
+
+      <div class="cosmic-grid">
+        <!-- Live Cosmic Stats -->
+        <div class="glass-card stat-hero">
+          <div class="stat-header">
+            <span class="icon-orb">🪐</span>
+            <div>
+              <h3>Time Spent Blessing This World</h3>
+              <p class="meta-sub">Calculated live since Sept 18, 8:10 PM</p>
+            </div>
+          </div>
+          
+          <div class="live-counter-grid">
+            <div class="count-box">
+              <span class="count-num" id="counterDays">0</span>
+              <span class="count-label">Days Alive 🌸</span>
+            </div>
+            <div class="count-box">
+              <span class="count-num" id="counterHours">0</span>
+              <span class="count-label">Hours of Radiance ✨</span>
+            </div>
+            <div class="count-box">
+              <span class="count-num" id="counterHeartbeats">0</span>
+              <span class="count-label">Heartbeats (~Billion 💓)</span>
+            </div>
+            <div class="count-box">
+              <span class="count-num" id="counterSunOrbit">0</span>
+              <span class="count-label">Million Km Traveled 🚀</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Virgo Profile -->
+        <div class="glass-card virgo-card">
+          <div class="zodiac-badge">
+            <span class="zodiac-symbol">♍</span>
+            <div>
+              <h4 id="zodiacSign">Virgo Sun Princess</h4>
+              <span class="element-tag">Earth Element 🌿 • Ruled by Mercury 🪐</span>
+            </div>
+          </div>
+
+          <div class="astro-facts-list">
+            <div class="astro-row">
+              <span class="row-label">Birth Gem:</span>
+              <span class="row-val">Blue Sapphire 💎 (Elegance & Royalty)</span>
+            </div>
+            <div class="astro-row">
+              <span class="row-label">Birth Flower:</span>
+              <span class="row-val">Aster & Morning Glory 🌸 (Unconditional Love)</span>
+            </div>
+            <div class="astro-row">
+              <span class="row-label">Twilight Hour (8:10 PM):</span>
+              <span class="row-val">Venus rising in pure aesthetic grace 💖</span>
+            </div>
+          </div>
+
+          <div class="trait-bars">
+            <div class="trait-item">
+              <div class="trait-head"><span>Golden Heart & Kindness</span><span>100%</span></div>
+              <div class="progress-bar"><div class="fill" style="width: 100%"></div></div>
+            </div>
+            <div class="trait-item">
+              <div class="trait-head"><span>Aesthetic Taste & Style</span><span>99.9%</span></div>
+              <div class="progress-bar"><div class="fill" style="width: 99.9%"></div></div>
+            </div>
+            <div class="trait-item">
+              <div class="trait-head"><span>Stealing Brother's Clothes & Hoodies</span><span>100%</span></div>
+              <div class="progress-bar"><div class="fill" style="width: 100%"></div></div>
+            </div>
+            <div class="trait-item">
+              <div class="trait-head"><span>Being Annoyingly Sassy & Right</span><span>101%</span></div>
+              <div class="progress-bar"><div class="fill" style="width: 101%"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav-footer">
+        <button class="pill-btn secondary prev-btn">← Back</button>
+        <button class="primary-btn next-btn">Explore Memory Photobooth 📸 →</button>
+      </div>
+    </section>
+
+    <!-- ========================================================== -->
+    <!-- CHAPTER 2: INSTAGRAM STORY (DEFAULT) + DRAGGABLE POLAROIDS -->
+    <!-- ========================================================== -->
+    <section class="chapter-card" id="chapter-2">
+      <div class="chapter-header">
+        <span class="chapter-badge">Chapter 02 // Memory Photobooth</span>
+        <h2 class="section-title">The Bestie Photo Journey 📸💖</h2>
+        <p class="section-desc">Watch her Instagram Birthday Story first! Then switch to play with the <strong>freely draggable Polaroid scrapbook</strong> or view the photo slideshow.</p>
+      </div>
+
+      <!-- Photo Mode Switcher Tabs -->
+      <div class="photo-view-switcher">
+        <button class="photo-tab-btn active" id="tabStoryBtn">📱 Instagram Story Mode (Default)</button>
+        <button class="photo-tab-btn" id="tabPolaroidsBtn">🖼️ Draggable Polaroid Scrapbook (8 Photos)</button>
+        <button class="photo-tab-btn" id="tabSlideshowBtn">🎞️ Photo Slideshow</button>
+      </div>
+
+      <!-- VIEW 1: INLINE INSTAGRAM STORY VIEWER (DEFAULT VIEW) -->
+      <div class="inline-story-container" id="inlineStoryView">
+        <div class="inline-story-phone">
+          <!-- Story Progress Bars -->
+          <div class="story-bars-top" id="inlineStoryBars"></div>
+
+          <!-- Story Header -->
+          <div class="story-user-header">
+            <div class="story-avatar-pill">
+              <span class="story-ava-icon">👑</span>
+              <div>
+                <strong class="recipient-name">Bestie</strong>
+                <small>18 Sept ✦ 8:10 PM</small>
+              </div>
+            </div>
+            <div class="story-auto-badge">Auto-playing 4.5s ⏳</div>
+          </div>
+
+          <!-- Story Slide Image & Touch Zones -->
+          <div class="story-display-area" id="inlineStoryDisplay">
+            <img src="" alt="Instagram Story" id="inlineStoryImg">
+            <!-- 4 Distinct Birthday Wish Styles Overlay Container -->
+            <div class="story-wish-overlay" id="storyWishOverlay">
+              <div class="wish-style-badge" id="wishStyleBadge">STYLE 1</div>
+              <div class="wish-banner-title" id="wishBannerTitle">HAPPY BIRTHDAY</div>
+              <div class="wish-banner-sub" id="wishBannerSub">To the realest soul I know 💖</div>
+            </div>
+            <div class="inline-story-caption" id="inlineStoryCaption"></div>
+            <div class="story-touch-left" id="storyTouchLeft" title="Previous Story"></div>
+            <div class="story-touch-right" id="storyTouchRight" title="Next Story"></div>
+          </div>
+
+          <!-- Story Quick Actions -->
+          <div class="story-bottom-bar">
+            <button class="story-pill-action" id="storyLikeBtn">💖 Send Birthday Love</button>
+            <button class="story-pill-action" id="storyConfettiBtn">🎉 Fire Confetti</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- VIEW 2: FREELY DRAGGABLE POLAROID SCRAPBOOK (8 PHOTOS) -->
+      <div class="draggable-scrapbook-container hidden" id="draggableScrapbookView">
+        <div class="scrapbook-desk-header">
+          <span>✨ <strong>Grab & Drag</strong> any Polaroid anywhere! Click or tap to <strong>flip in 3D</strong> and read secret notes!</span>
+          <button class="pill-btn secondary small-btn" id="realignPolaroidsBtn">↺ Shuffle & Stack</button>
+        </div>
+
+        <div class="scrapbook-desk" id="scrapbookDesk">
+          <!-- 8 Draggable Polaroids generated via script.js -->
+        </div>
+      </div>
+
+      <!-- VIEW 3: ELEGANT PHOTO SLIDESHOW CAROUSEL -->
+      <div class="slideshow-container hidden" id="slideshowView">
+        <div class="slideshow-frame">
+          <button class="slide-nav-btn prev" id="slidePrevBtn">&#10094;</button>
+          <div class="slide-active-wrapper" id="slideActiveWrap">
+            <img src="" alt="Slideshow Image" id="slideImg">
+            <div class="slide-text-banner">
+              <span class="slide-era-badge" id="slideEra">CHAPTER 1 // THE ARRIVAL</span>
+              <h3 id="slideTitle"></h3>
+              <p id="slideDesc"></p>
+            </div>
+          </div>
+          <button class="slide-nav-btn next" id="slideNextBtn">&#10095;</button>
+        </div>
+        <div class="slideshow-dots" id="slideshowDots"></div>
+      </div>
+
+      <div class="nav-footer">
+        <button class="pill-btn secondary prev-btn">← Back</button>
+        <button class="primary-btn next-btn">Time for the Birthday Cake 🎂 →</button>
+      </div>
+    </section>
+
+    <!-- ========================================================== -->
+    <!-- CHAPTER 3: LUXURY 3D BIRTHDAY CAKE & CANDLE BLOW          -->
+    <!-- ========================================================== -->
+    <section class="chapter-card" id="chapter-3">
+      <div class="chapter-header">
+        <span class="chapter-badge">Chapter 03 // Ritual of Wishes</span>
+        <h2 class="section-title">The Royal Birthday Cake 🎂✨</h2>
+        <p class="section-desc">Piped strawberry cream, edible golden pearls, and 3 glowing candles. Click candles or tap the button to make a wish!</p>
+      </div>
+
+      <div class="luxury-cake-stage">
+        <!-- Cake Topper -->
+        <div class="cake-topper-acrylic">
+          <span>Happy Birthday Queen 👑</span>
+          <small>✦ Sept 18 • 8:10 PM ✦</small>
+        </div>
+
+        <div class="cake-centerpiece" id="cakeElement">
+          <!-- Floating Candles Row -->
+          <div class="candles-row" id="candlesRow">
+            <div class="candle-wrapper" data-candle="1">
+              <div class="candle-flame">
+                <div class="flame-core"></div>
+                <div class="flame-glow"></div>
+              </div>
+              <div class="candle-wick"></div>
+              <div class="candle-body gold-stripe"></div>
+            </div>
+            <div class="candle-wrapper center-tall" data-candle="2">
+              <div class="candle-flame">
+                <div class="flame-core"></div>
+                <div class="flame-glow"></div>
+              </div>
+              <div class="candle-wick"></div>
+              <div class="candle-body pink-stripe"></div>
+            </div>
+            <div class="candle-wrapper" data-candle="3">
+              <div class="candle-flame">
+                <div class="flame-core"></div>
+                <div class="flame-glow"></div>
+              </div>
+              <div class="candle-wick"></div>
+              <div class="candle-body gold-stripe"></div>
+            </div>
+          </div>
+
+          <!-- Tier 1 (Top Tier) -->
+          <div class="cake-tier tier-1">
+            <div class="cream-piping-top">
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <div class="strawberries-topping">
+              <span class="strawberry-fruit">🍓</span>
+              <span class="cherry-fruit">🍒</span>
+              <span class="strawberry-fruit">🍓</span>
+              <span class="cherry-fruit">🍒</span>
+            </div>
+            <div class="ganache-drips">
+              <div class="drip drip-1"></div>
+              <div class="drip drip-2"></div>
+              <div class="drip drip-3"></div>
+              <div class="drip drip-4"></div>
+            </div>
+          </div>
+
+          <!-- Tier 2 (Middle Tier) -->
+          <div class="cake-tier tier-2">
+            <div class="sugar-pearls-row">
+              <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+            </div>
+            <div class="ribbon-band"></div>
+          </div>
+
+          <!-- Tier 3 (Base Tier) -->
+          <div class="cake-tier tier-3">
+            <div class="bottom-piping">
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+
+          <!-- Golden Cake Pedestal Stand -->
+          <div class="gold-pedestal">
+            <div class="plate-lip"></div>
+            <div class="pedestal-stem"></div>
+            <div class="pedestal-base"></div>
+          </div>
+        </div>
+
+        <!-- Cut Slice Element -->
+        <div class="cake-slice-plate hidden" id="cakeSlicePlate">
+          <div class="slice-object">🍰</div>
+          <div class="slice-text">
+            <strong>A Delicious Slice For The Queen!</strong>
+            <span>Calories don't count on your birthday! 💖</span>
+          </div>
+        </div>
+
+        <div class="cake-actions-bar">
+          <button class="blow-candle-btn" id="blowBtn">
+            <span class="blow-icon">💨</span>
+            <span id="blowBtnText">Make a Wish & Blow Candles!</span>
+          </button>
+          <button class="pill-btn secondary cut-slice-btn" id="cutCakeBtn">
+            <span>🔪 Cut a Slice of Cake</span>
+          </button>
+        </div>
+
+        <div class="celebration-banner hidden" id="celebrationBanner">
+          <div class="banner-sparkles">🎉 🥳 🎂 👑 💖</div>
+          <h3>WISH ACCEPTED BY THE UNIVERSE!</h3>
+          <p>May all your unspoken dreams, quiet prayers, and wildest goals come true this year!</p>
+        </div>
+      </div>
+
+      <div class="nav-footer">
+        <button class="pill-btn secondary prev-btn">← Back</button>
+        <button class="primary-btn next-btn">Play Fun Birthday Mini-Games 🕹️ →</button>
+      </div>
+    </section>
+
+    <!-- ========================================================== -->
+    <!-- CHAPTER 4: VIRAL INSTAGRAM MINI-GAMES ARCADE              -->
+    <!-- ========================================================== -->
+    <section class="chapter-card" id="chapter-4">
+      <div class="chapter-header">
+        <span class="chapter-badge">Chapter 04 // Birthday Arcade</span>
+        <h2 class="section-title">Bestie Mini-Games 🕹️💖</h2>
+        <p class="section-desc">Viral birthday games inspired by Instagram! Pop all the balloons or catch the falling birthday treats!</p>
+      </div>
+
+      <div class="game-tabs">
+        <button class="game-tab-btn active" data-game="balloon">🎈 Pop The Balloons</button>
+        <button class="game-tab-btn" data-game="catcher">🧺 Catch The Hearts</button>
+        <button class="game-tab-btn" data-game="wheel">🎡 Fortune Wheel</button>
+        <button class="game-tab-btn" data-game="jigsaw">🧩 Photo Jigsaw (25 Pieces)</button>
+      </div>
+
+      <!-- MINI-GAME 1: BALLOON POP -->
+      <div class="game-panel active" id="game-balloon">
+        <div class="game-instruction-box">
+          <p>Tap and pop every floating balloon to reveal a secret compliment!</p>
+          <div class="game-score-badge">Popped: <span id="poppedCount">0</span> / 6 🎈</div>
+        </div>
+        <div class="balloon-arena" id="balloonArena"></div>
+        <div class="balloon-reset-wrap">
+          <button class="pill-btn secondary" id="resetBalloonsBtn">🎈 Spawn More Balloons</button>
+        </div>
+      </div>
+
+      <!-- MINI-GAME 2: CATCH THE FALLING HEARTS & TREATS -->
+      <div class="game-panel" id="game-catcher">
+        <div class="game-instruction-box">
+          <p>Move the basket left & right (mouse or touch) to catch falling hearts & cupcakes!</p>
+          <div class="game-score-badge">Score: <span id="catcherScore">0</span> 💖</div>
+        </div>
+        <div class="catcher-arena" id="catcherArena">
+          <div class="basket" id="catcherBasket">🧺</div>
+        </div>
+        <div class="catcher-controls">
+          <button class="primary-btn" id="startCatcherBtn">▶️ Start Catching Game</button>
+        </div>
+      </div>
+
+      <!-- MINI-GAME 3: FORTUNE WHEEL -->
+      <div class="game-panel" id="game-wheel">
+        <div class="game-instruction-box">
+          <p>Spin the Wheel of Tai's Prophecy to see what your year holds!</p>
+        </div>
+        <div class="wheel-stage">
+          <div class="wheel-pointer">🔻</div>
+          <div class="fortune-wheel" id="fortuneWheel">
+            <div class="wheel-segment" style="--rot: 0deg;"><span>✈️ Dream Trip</span></div>
+            <div class="wheel-segment" style="--rot: 60deg;"><span>🧋 Endless Boba</span></div>
+            <div class="wheel-segment" style="--rot: 120deg;"><span>👑 Main Character</span></div>
+            <div class="wheel-segment" style="--rot: 180deg;"><span>💸 Big Wealth</span></div>
+            <div class="wheel-segment" style="--rot: 240deg;"><span>💖 Pure Joy</span></div>
+            <div class="wheel-segment" style="--rot: 300deg;"><span>✨ Big Glow Up</span></div>
+          </div>
+        </div>
+        <div class="wheel-action-wrap">
+          <button class="primary-btn glow-btn" id="spinWheelBtn">🎡 Spin Fortune Wheel</button>
+          <div class="wheel-result-tag" id="wheelResult">Spin to see your prophecy!</div>
+        </div>
+      </div>
+
+      <!-- MINI-GAME 4: 25-PIECE PHOTO JIGSAW PUZZLE (IN-PLACE JUMBLED SWAP) -->
+      <div class="game-panel" id="game-jigsaw">
+        <div class="game-instruction-box">
+          <div>
+            <p><strong>Rearrange the 25 Jumbled Jigsaw Pieces!</strong> Tap any two pieces to swap their positions.</p>
+            <small class="jigsaw-subtext">✨ Interlocking classic jigsaw puzzle cuts! Tap piece 1, then tap piece 2 to swap until the photo is complete.</small>
+          </div>
+          <div class="game-score-badge">Correct: <span id="jigsawPlacedCount">0</span> / 25 🧩</div>
+        </div>
+
+        <div class="jigsaw-workspace">
+          <!-- Top bar with Reference toggle -->
+          <div class="jigsaw-top-controls">
+            <button class="pill-btn secondary small-btn" id="toggleJigsawPreviewBtn">👁️ Show Reference Photo</button>
+            <span class="jigsaw-status-hint" id="jigsawStatusHint">Tap a piece to select it</span>
+          </div>
+
+          <!-- Reference Modal/Preview -->
+          <div class="jigsaw-preview-box hidden" id="jigsawPreviewBox">
+            <img src="" alt="Reference Photo" id="jigsawPreviewImg">
+            <span class="jigsaw-preview-tag">Goal Image 👑</span>
+          </div>
+
+          <!-- Single In-Place Jumbled 5x5 Jigsaw Grid -->
+          <div class="jigsaw-board-wrap">
+            <div class="jigsaw-board interlocking-jigsaw-board" id="jigsawBoard">
+              <!-- 25 interlocking jigsaw pieces generated by JS -->
+            </div>
+          </div>
+        </div>
+
+        <div class="jigsaw-controls">
+          <button class="pill-btn secondary" id="resetJigsawBtn">↺ Re-Jumble Puzzle</button>
+          <button class="pill-btn secondary" id="autoSolveJigsawBtn">✨ Magic Auto-Solve</button>
+        </div>
+
+        <div class="jigsaw-win-banner hidden" id="jigsawWinBanner">
+          <div class="win-emojis">🎉 👑 🧩 ✨ 💖</div>
+          <h3>YOU COMPLETED THE PUZZLE!</h3>
+          <p>All 25 interlocking jigsaw pieces rearranged to perfection for the Birthday Queen!</p>
+        </div>
+      </div>
+
+      <div class="nav-footer">
+        <button class="pill-btn secondary prev-btn">← Back</button>
+        <button class="primary-btn next-btn">Uncover Secret Scratch Cards 🪄 →</button>
+      </div>
+    </section>
+
+    <!-- ========================================================== -->
+    <!-- CHAPTER 5: REALISTIC METALLIC SCRATCH CARDS (ACCURATE HIT)-->
+    <!-- ========================================================== -->
+    <section class="chapter-card" id="chapter-5">
+      <div class="chapter-header">
+        <span class="chapter-badge">Chapter 05 // Interactive Foil Reveal</span>
+        <h2 class="section-title">Golden Foil Scratch Cards 🪄✨</h2>
+        <p class="section-desc">Rub with your mouse or finger to scratch off the sparkling golden foil and reveal your 4 royal birthday fortunes!</p>
+      </div>
+
+      <div class="scratch-grid-enhanced" id="scratchCardGrid"></div>
+
+      <div class="scratch-controls">
+        <button class="pill-btn secondary" id="autoScratchBtn">✨ Scratch Off All Cards Instantly</button>
+      </div>
+
+      <div class="nav-footer">
+        <button class="pill-btn secondary prev-btn">← Back</button>
+        <button class="primary-btn next-btn">View The Bestie Receipt 🧾 →</button>
+      </div>
+    </section>
+
+    <!-- ========================================================== -->
+    <!-- CHAPTER 6: VIRAL BROTHER-TAI RECEIPT (SIBLING TAX INVOICE) -->
+    <!-- ========================================================== -->
+    <section class="chapter-card" id="chapter-6">
+      <div class="chapter-header">
+        <span class="chapter-badge">Chapter 06 // Sibling Tax Invoice</span>
+        <h2 class="section-title">The Brother-Tai Official Receipt 🧾💖</h2>
+        <p class="section-desc">Itemized summary of emotional damages, stolen hoodies, shared snacks, and unconditional brotherly love since Sept 18 @ 8:10 PM.</p>
+      </div>
+
+      <div class="receipt-container">
+        <div class="thermal-receipt">
+          <div class="receipt-cut-top"></div>
+          <div class="receipt-header">
+            <h3>BROTHER-TAI BOND & CO.</h3>
+            <p>CUSTOMER: AKSHATA RAGHU (FAVORITE TAI)</p>
+            <p class="receipt-order">BILL ISSUED BY: YOUR PROUD BROTHER 👦</p>
+            <p class="receipt-order">ORDER #0918-AKSHATA-QUEEN</p>
+            <div class="receipt-dashed"></div>
+          </div>
+
+          <div class="receipt-items">
+            <div class="receipt-row">
+              <span>Stolen Brother Hoodies & Sweaters</span>
+              <span>$999.00 (Unreturned)</span>
+            </div>
+            <div class="receipt-row">
+              <span>Late-Night Venting & Life Therapy</span>
+              <span>FREE (Unlimited)</span>
+            </div>
+            <div class="receipt-row">
+              <span>"Bro, Order Swiggy/Boba For Me"</span>
+              <span>428x Orders</span>
+            </div>
+            <div class="receipt-row">
+              <span>Acting Innocent in Front of Parents</span>
+              <span>1000% Professional</span>
+            </div>
+            <div class="receipt-row">
+              <span>Laughing At Each Other's Fails</span>
+              <span>Priceless 😂</span>
+            </div>
+            <div class="receipt-row">
+              <span>Virgo Drama & Overthinking Surcharge</span>
+              <span>100% Waived</span>
+            </div>
+            <div class="receipt-row">
+              <span>Lifetime Brother Protection Shield</span>
+              <span>ACTIVE 24/7 🛡️</span>
+            </div>
+          </div>
+
+          <div class="receipt-dashed"></div>
+
+          <div class="receipt-total">
+            <div class="receipt-row total-row">
+              <span>TOTAL VALUE:</span>
+              <span>ONE IRREPLACEABLE TAI 💖</span>
+            </div>
+            <p class="receipt-tax">PAYMENT METHOD: LIFETIME HUGS & RESPECT</p>
+            <p class="receipt-tax">AUTH CODE: BRO-AKSHATA-20:10-0918</p>
+          </div>
+
+          <div class="receipt-barcode-wrap">
+            <div class="barcode-lines">
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <span class="barcode-num">✦ AKSHATA ✦ RAGHU ✦ 1809 ✦</span>
+          </div>
+
+          <div class="receipt-thank-you">
+            THANK YOU FOR BEING THE GREATEST, MOST BEAUTIFUL & MOST ANNOYING TAI IN THE WHOLE WORLD! ✨
+          </div>
+          <div class="receipt-cut-bottom"></div>
+        </div>
+      </div>
+
+      <div class="nav-footer">
+        <button class="pill-btn secondary prev-btn">← Back</button>
+        <button class="primary-btn next-btn">Read Your Brother's Letter 💌 →</button>
+      </div>
+    </section>
+
+    <!-- ========================================================== -->
+    <!-- CHAPTER 7: THE HEARTFELT LETTER FROM BROTHER & SKY LANTERN -->
+    <!-- ========================================================== -->
+    <section class="chapter-card" id="chapter-7">
+      <div class="chapter-header">
+        <span class="chapter-badge">Chapter 07 // A Brother's Letter</span>
+        <h2 class="section-title">From Your Brother & Into The Stars 💌✨</h2>
+        <p class="section-desc">A personal message straight from my heart, plus a wishing lantern to release into the galaxy.</p>
+      </div>
+
+      <!-- Wax-Sealed Letter -->
+      <div class="letter-parchment-wrap">
+        <div class="letter-sheet">
+          <div class="letter-stamp-corner">
+            <span>SEPTEMBER 18</span>
+            <small>8:10 PM</small>
+          </div>
+          <h3 class="letter-salutation" id="letterSalutation">To My Dearest Tai, Akshata Raghu,</h3>
+          <div class="letter-body" id="letterBody"></div>
+          <div class="letter-signature" id="letterSignature"></div>
+        </div>
+      </div>
+
+      <!-- Wishing Lantern Interactive Well -->
+      <div class="wishing-well-card glass-card">
+        <div class="well-header">
+          <span class="lantern-icon">🏮</span>
+          <div>
+            <h3>Send a Birthday Wish to the Stars</h3>
+            <p>Type your personal wish or manifestation for this year and release your glowing lantern!</p>
+          </div>
+        </div>
+
+        <div class="wish-form">
+          <input type="text" id="wishInput" placeholder="e.g. Joy, peace, travelling the world, dream job, endless boba..." maxlength="120">
+          <button class="primary-btn glow-btn" id="releaseLanternBtn">
+            <span>Release Lantern 🏮💖</span>
+          </button>
+        </div>
+
+        <div class="released-wishes-tray" id="wishesTray"></div>
+      </div>
+
+      <!-- Final Finale Card -->
+      <div class="final-celebration-card">
+        <h3>Cheers to You, Akshata Raghu! 🥂💖</h3>
+        <p>Thank you for being the most loving, chaotic, and irreplaceable Tai any brother could ever ask for. Here's to your happiest year yet!</p>
+        <div class="final-btns">
+          <button class="primary-btn glow-btn" id="burstMoreConfettiBtn">🎊 Fire Confetti For Akshata!</button>
+          <button class="pill-btn secondary" id="replayJourneyBtn">↺ Replay Experience</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================== -->
+  <!-- DRAWER: IN-BROWSER CUSTOMIZER                             -->
+  <!-- ========================================================== -->
+  <aside class="customizer-drawer" id="customizerDrawer">
+    <div class="drawer-header">
+      <h3>🎨 Customize Website</h3>
+      <button class="drawer-close" id="closeDrawerBtn">&times;</button>
+    </div>
+    <div class="drawer-content">
+      <p class="drawer-tip">Quickly tweak the name, birth year, or replace any polaroid photo with your own image right here in the browser!</p>
+
+      <div class="form-group">
+        <label for="custNickname">Recipient Name:</label>
+        <input type="text" id="custNickname" value="Akshata Raghu">
+      </div>
+
+      <div class="form-group">
+        <label for="custBirthYear">Birth Year (for Cosmic Age Counter):</label>
+        <input type="number" id="custBirthYear" value="2004" min="1970" max="2026">
+      </div>
+
+      <hr class="drawer-divider">
+      <h4>📸 Replace Photos</h4>
+      <p class="drawer-sub">Select local photos from your computer to preview them in the polaroid wall:</p>
+      
+      <div class="photo-upload-list" id="photoUploadList"></div>
+
+      <div class="drawer-actions">
+        <button class="primary-btn" id="saveCustomizerBtn">Apply Changes</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Load Config First, then Main Script -->
+  <script src="config.js?v=fresh_v10"></script>
+  <script src="script.js?v=fresh_v10"></script>
+</body>
+</html>
